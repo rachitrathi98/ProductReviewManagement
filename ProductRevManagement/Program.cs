@@ -32,6 +32,8 @@ namespace ProductRevManagement
             Mgmt.RetrieveTop(reviews);
             //Retrieve on Some Condition
             Mgmt.RetrieveonCond(reviews);
+            //Retrieve Count of product review for each ID
+            Mgmt.RetrieveCountOfProductReviewsForEachID(reviews);
         }
     }
 }

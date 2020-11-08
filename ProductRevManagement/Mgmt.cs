@@ -36,5 +36,19 @@ namespace ProductRevManagement
             }
 
         }
+        /// <summary>
+        /// Retrieves the count of product reviews for each product ID.
+        /// </summary>
+        /// <param name="reviews">The reviews.</param>
+        public static void RetrieveCountOfProductReviewsForEachID(List<ProductReview> reviews)
+        {
+            var resultData = reviews.GroupBy(x => x.ProductID).Select(x => new { ProductID = x.Key, Count = x.Count() }).OrderBy(x => x.ProductID);
+
+            foreach (var res in resultData)
+            {
+                Console.WriteLine("Product ID: " + res.ProductID + " Count: " + res.Count);
+            }
+        }
+
     }
 }
