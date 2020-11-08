@@ -47,8 +47,12 @@ namespace ProductRevManagement
             //FInd Average rating per product ID;
             Console.WriteLine("Find Average Ratings per Product ID");
             Mgmt.FindAvgRatingsPerProductID(reviews);
-            Console.WriteLine("UC11 Retrieve Nice Message from Product Reviews");
+            Console.WriteLine("Retrieve Nice Message from Product Reviews");
             Mgmt.RetrieveNiceMsg(reviews);
+            //Add and Retrive based on USer ID
+            Console.WriteLine("Add and retrieve record from Table based on UserID");
+            Mgmt.AddandRetrieveRecordOfaUserID();
+
 
         }
     }
