@@ -38,6 +38,9 @@ namespace ProductRevManagement
             Mgmt.RetrieveProductIDAndReviews(reviews);
             //Skip top 5 records from the list
             Mgmt.SkipTopfiveRecords(reviews);
+            ///Create and Fetch datatable records
+            Console.WriteLine("Create and Fetch Datable Records");
+            Mgmt.CreateDataTable();
 
 
         }
