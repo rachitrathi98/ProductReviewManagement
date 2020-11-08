@@ -107,6 +107,20 @@ namespace ProductRevManagement
 
         }
         /// <summary>
+        /// Retrieves the data by is like (true).
+        /// </summary>
+        public static void RetrieveRowByIsLike()
+        {
+            //var rows = from product in table.AsEnumerable() where product.Field<string>("IsLike").Contains(true) select product; 
+
+            var rows = table.AsEnumerable().Where(x => x.Field<string>("IsLike") == "true").Select(x => x);
+
+            foreach (var row in rows)
+            {
+                Console.WriteLine("ProductID: " + row.Field<string>("ProductID") + ", UserID: " + row.Field<string>("UserID") + ", Ratings: " + row.Field<string>("Ratings") + " , Review: " + row.Field<string>("Review") + " , IsLike: " + row.Field<string>("IsLike"));
+            }
+        }
+        /// <summary>
         /// Displays the data table.
         /// </summary>
         public static void DisplayDataTable()

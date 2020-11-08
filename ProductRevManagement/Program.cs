@@ -38,10 +38,12 @@ namespace ProductRevManagement
             Mgmt.RetrieveProductIDAndReviews(reviews);
             //Skip top 5 records from the list
             Mgmt.SkipTopfiveRecords(reviews);
-            ///Create and Fetch datatable records
+            //Create and Fetch datatable records
             Console.WriteLine("Create and Fetch Datable Records");
             Mgmt.CreateDataTable();
-
+            //Fetch data where IsLikeis True
+            Console.WriteLine("Fetch rows where IsLike is true");
+            Mgmt.RetrieveRowByIsLike();
 
         }
     }
