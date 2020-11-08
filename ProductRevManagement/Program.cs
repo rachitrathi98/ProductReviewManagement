@@ -44,6 +44,8 @@ namespace ProductRevManagement
             //Fetch data where IsLikeis True
             Console.WriteLine("Fetch rows where IsLike is true");
             Mgmt.RetrieveRowByIsLike();
+            Console.WriteLine("Find Average Ratings per Product ID");
+            Mgmt.FindAvgRatingsPerProductID(reviews);
 
         }
     }

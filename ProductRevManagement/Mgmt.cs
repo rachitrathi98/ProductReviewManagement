@@ -121,6 +121,21 @@ namespace ProductRevManagement
             }
         }
         /// <summary>
+        /// Finds the average ratings per product ID.
+        /// </summary>
+        /// <param name="reviews">The reviews.</param>
+        public static void FindAvgRatingsPerProductID(List<ProductReview> reviews)
+        {
+            var list = reviews.GroupBy(x => x.ProductID);
+
+            //Iterating for each ProductID and Calulating Avg Ratings
+            foreach (var groups in list)
+            {
+                Console.WriteLine("ProductID: " + groups.Key + " Average Ratings: " + groups.Average(x => x.Ratings));
+            }
+        }
+
+        /// <summary>
         /// Displays the data table.
         /// </summary>
         public static void DisplayDataTable()
