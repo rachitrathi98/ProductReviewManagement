@@ -30,6 +30,8 @@ namespace ProductRevManagement
             }
             ///Retrieve top three records
             Mgmt.RetrieveTop(reviews);
+            //Retrieve on Some Condition
+            Mgmt.RetrieveonCond(reviews);
         }
     }
 }
