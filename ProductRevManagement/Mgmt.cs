@@ -49,6 +49,21 @@ namespace ProductRevManagement
                 Console.WriteLine("Product ID: " + res.ProductID + " Count: " + res.Count);
             }
         }
+        /// <summary>
+        /// Retrieve product ID and Review
+        /// </summary>
+        /// <param name="reviews"></param>
+        public static void RetrieveProductIDAndReviews(List<ProductReview> reviews)
+        {
+            //Query Syntax
+            var qlist = from product in reviews select new { product.ProductID, product.Review };
+            //Method Syntax
+            var mlist = reviews.Select(x => new { x.ProductID, x.Review });
+            foreach (var product in qlist)
+            {
+                Console.WriteLine("Product ID: " + product.ProductID + " Review: " + product.Review);
+            }
+        }
 
     }
 }
