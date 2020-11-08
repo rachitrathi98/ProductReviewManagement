@@ -64,6 +64,20 @@ namespace ProductRevManagement
                 Console.WriteLine("Product ID: " + product.ProductID + " Review: " + product.Review);
             }
         }
+        /// <summary>
+        /// Skips the top5 records from the list based on ratings.
+        /// </summary>
+        /// <param name="reviews">The reviews.</param>
+        public static void SkipTopfiveRecords(List<ProductReview> reviews)
+        {
+            //In Method Syntax
+            var mlist = reviews.OrderByDescending(x => x.Ratings).Skip(5);
+
+            foreach (var review in mlist)
+            {
+                Console.WriteLine("ProductID: " + review.ProductID + ", UserID: " + review.UserID + ", Ratings: " + review.Ratings + " , Review: " + review.Review + " , IsLike: " + review.IsLike);
+            }
+        }
 
     }
 }

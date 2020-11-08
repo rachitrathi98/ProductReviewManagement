@@ -36,6 +36,9 @@ namespace ProductRevManagement
             Mgmt.RetrieveCountOfProductReviewsForEachID(reviews);
             //Retrieve product ID and Review
             Mgmt.RetrieveProductIDAndReviews(reviews);
+            //Skip top 5 records from the list
+            Mgmt.SkipTopfiveRecords(reviews);
+
 
         }
     }
