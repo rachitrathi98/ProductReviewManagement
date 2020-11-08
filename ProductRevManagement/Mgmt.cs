@@ -134,6 +134,19 @@ namespace ProductRevManagement
                 Console.WriteLine("ProductID: " + groups.Key + " Average Ratings: " + groups.Average(x => x.Ratings));
             }
         }
+        /// <summary>
+        /// Retrieves records with nice message.
+        /// </summary>
+        /// <param name="reviews">The reviews.</param>
+        public static void RetrieveNiceMsg(List<ProductReview> reviews)
+        {
+            var list = from products in reviews where products.Review.Equals("Nice") select products;
+
+            foreach (var review in list)
+            {
+                Console.WriteLine("ProductID: " + review.ProductID + ", UserID: " + review.UserID + ", Ratings: " + review.Ratings + " , Review: " + review.Review + " , IsLike: " + review.IsLike);
+            }
+        }
 
         /// <summary>
         /// Displays the data table.
