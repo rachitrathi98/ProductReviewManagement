@@ -8,6 +8,7 @@ namespace ProductRevManagement
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Product Review Management!");
+            ///Create Product List
             List<ProductReview> reviews = new List<ProductReview>()
             {
                 new ProductReview(){ ProductID = 1, UserID = 1, Ratings = 8, Review = "Good", IsLike = true},
@@ -27,6 +28,8 @@ namespace ProductRevManagement
             {
                 Console.WriteLine("ProductID: " + review.ProductID + ", UserID: " + review.UserID + ", Ratings: " + review.Ratings + " , Review: " + review.Review + " , IsLike: " + review.IsLike);
             }
+            ///Retrieve top three records
+            Mgmt.RetrieveTop(reviews);
         }
     }
 }

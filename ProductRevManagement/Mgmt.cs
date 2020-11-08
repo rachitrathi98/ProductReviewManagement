@@ -9,7 +9,10 @@ namespace ProductRevManagement
     public class Mgmt
     {   
         public readonly DataTable table = new DataTable();
-
+        /// <summary>
+        /// Retrieves the top three records.
+        /// </summary>
+        /// <param name="reviews">The reviews.</param>
         public static void RetrieveTop(List<ProductReview> reviews)
         {
             var list = (from products in reviews orderby products.Ratings descending select products).Take(3).ToList();
